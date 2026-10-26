@@ -45,3 +45,21 @@ classDiagram
     Usuario <|-- Cliente : Herança
     Usuario <|-- Tecnico : Herança
     Cliente <-- OrdemServico : Associação
+---
+
+# DOCUMENTAÇÃO DE UI/UX E COMPONENTES (SPRINT 3)
+
+## 1. ARQUITETURA DA INFORMAÇÃO E DASHBOARD
+- **Painel Superior:** Exibe totalizadores (Total de OS, Abertas, Concluídas) consumidos do GerenciadorOS (Singleton).
+- **Formulário Lateral:** Cadastra novos chamados instanciando usuários via UsuarioFactory.
+- **Tabela Central:** Lista dinâmica e responsiva de Ordens de Serviço.
+
+## 2. COMPONENTES UI
+- **StatusBadge:** Elementos com cores semânticas indicando o estado do chamado: Amarelo (`ABERTA`), Azul (`EM ANDAMENTO`), Verde (`CONCLUÍDA`).
+- **UserCard:** Exibe informações resumidas do Cliente e Técnico associados à OS.
+- **OSTable:** Tabela estilizada com Flexbox/CSS Grid contendo ações rápidas.
+
+## 3. CHECKLIST DE ACESSIBILIDADE (WCAG)
+- [x] Contraste mínimo de 4.5:1 nos textos, tabelas e badges.
+- [x] Navegação por teclado (TAB) funcional em formulários e botões.
+- [x] Rótulos `aria-label` e marcação semântica em todos os campos e ações.
